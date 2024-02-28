@@ -128,12 +128,7 @@ main {
 }
 
 .buttonEncriptar:hover, .buttonDesencriptar:hover, .actionCopy:hover{
-  transform: scale(1.03);
-}
-
-.buttonEncriptar:active, .buttonDesencriptar:active, .actionCopy:active{
-  opacity: 0.3;
-  transition: opacity 0.3s;
+  transform: scale(1.02);
 }
 
 .showEncryption {
@@ -185,6 +180,8 @@ main {
 
 .actionCopy {
   width: 90%;
+  background-color: #0a3871;
+  color: white;
 }
 
 footer {
