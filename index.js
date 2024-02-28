@@ -14,9 +14,15 @@ const claveDesencriptadora = new Map([
   ['ufat', 'u']
 ])
 
+const showMessage = document.querySelector('section.showEncryption')
+
 function encriptar (event) {
   event.preventDefault()
   let contentTextArea = document.querySelector('textarea').value
+
+  if(contentTextArea == ''){
+    return
+  }
 
   let testTexto = /^[a-z\s]+$/.test(contentTextArea)
 
@@ -31,14 +37,16 @@ function encriptar (event) {
     claveEncriptadora.get(vowel)
   )
 
-  document.querySelector(
-    'section.showEncryption'
-  ).innerHTML = `<p class='showMessage'>${encryptedMessage}</p> <button class='actionCopy' onclick='copiarPortapapeles()'>copiar</button>`
+  showMessage.innerHTML = `<p class='showMessage'>${encryptedMessage}</p> <button class='actionCopy' onclick='copiarPortapapeles()'>copiar</button>`
 }
 
 function desencriptar (event) {
   event.preventDefault()
   let contentTextArea = document.querySelector('textarea').value
+
+  if(contentTextArea == ''){
+    return
+  }
 
   let testTexto = /^[a-z\s]+$/.test(contentTextArea)
 
@@ -54,9 +62,7 @@ function desencriptar (event) {
     word => claveDesencriptadora.get(word)
   )
 
-  document.querySelector(
-    'section.showEncryption'
-  ).innerHTML = `<p class='showMessage'>${encryptedMessage}</p> <button class='actionCopy' onclick='copiarPortapapeles()'>copiar</button>`
+  showMessage.innerHTML = `<p class='showMessage'>${encryptedMessage}</p> <button class='actionCopy' onclick='copiarPortapapeles()'>copiar</button>`
 }
 
 function copiarPortapapeles () {
@@ -65,7 +71,6 @@ function copiarPortapapeles () {
     .writeText(contentTextArea)
     .then(() => {
       console.log('Texto copiado al portapapeles')
-      alert('texto copiado')
     })
     .catch(err => {
       console.error('Error al copiar al portapapeles:', err)
