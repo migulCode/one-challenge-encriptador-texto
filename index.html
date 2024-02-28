@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="¡Explora un desafío innovador que te sumerge en el emocionante mundo de la criptografía! Durante cuatro semanas, desarrollamos una aplicación única para encriptar y desencriptar mensajes de texto. Descubre cómo funciona nuestro algoritmo de sustitución de letras y desafía tus habilidades convirtiendo palabras simples en mensajes codificados y viceversa. Desde la creación de una interfaz intuitiva hasta funciones adicionales como la opción de copiar texto encriptado o desencriptado, este desafío es una oportunidad emocionante para acercarte un poco en la seguridad informática. ¿Listo para descubrir el secreto detrás de la encriptación de mensajes? ven y mira como funciona este desafio!">
+    <title>Encriptador - Reto ONE</title>
+    <link rel="icon" href="img/logoPage.webp" type="image/png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header class="headerPage">
+      <img src="img/Logo.webp" title="logo alura" alt="logo alura" />
+      <h1 class="titlePage">lura</h1>
+    </header>
+
+    <main>
+      <section class="encryptorShares">
+        <form>
+          <fieldset class="inputMessage">
+            <textarea
+              class="writeText"
+              name="textUser"
+              id="textUser"
+              placeholder="Ingrese el texto aqui!"
+            ></textarea>
+            <div>
+              <span class="inputWarningText">
+                <svg
+                  class="iconExclamation"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2_231)">
+                    <path
+                      d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM8 4C7.87361 4.00007 7.74863 4.02662 7.63312 4.07793C7.51761 4.12924 7.41413 4.20418 7.32934 4.29791C7.24456 4.39165 7.18035 4.5021 7.14084 4.62217C7.10134 4.74223 7.08743 4.86923 7.1 4.995L7.45 8.502C7.46176 8.63977 7.5248 8.76811 7.62664 8.86164C7.72849 8.95516 7.86173 9.00705 8 9.00705C8.13827 9.00705 8.27151 8.95516 8.37336 8.86164C8.4752 8.76811 8.53824 8.63977 8.55 8.502L8.9 4.995C8.91257 4.86923 8.89866 4.74223 8.85915 4.62217C8.81965 4.5021 8.75544 4.39165 8.67066 4.29791C8.58587 4.20418 8.48239 4.12924 8.36688 4.07793C8.25137 4.02662 8.12639 4.00007 8 4ZM8.002 10C7.73678 10 7.48243 10.1054 7.29489 10.2929C7.10736 10.4804 7.002 10.7348 7.002 11C7.002 11.2652 7.10736 11.5196 7.29489 11.7071C7.48243 11.8946 7.73678 12 8.002 12C8.26722 12 8.52157 11.8946 8.70911 11.7071C8.89664 11.5196 9.002 11.2652 9.002 11C9.002 10.7348 8.89664 10.4804 8.70911 10.2929C8.52157 10.1054 8.26722 10 8.002 10Z"
+                      fill="#495057"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2_231">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Solo letras minusculas y sin acentos</span
+              >
+            </div>
+          </fieldset>
+          <fieldset class="entryActions">
+            <button class="buttonEncriptar" onclick="encriptar(event)">
+              Encriptar
+            </button>
+            <button class="buttonDesencriptar" onclick="desencriptar(event)">
+              Desencriptar
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="showEncryption">
+        <img
+          src="img/Muñeco.webp"
+          title="Una persona buscando el mensaje encriptado"
+          alt="Banner de una persona esperando tu respuesta"
+          class="imageWait"
+        />
+        <div class="showContainerText">
+          <h2 class="titleWait">Ningún mensaje fue encontrado</h2>
+          <p class="paragraphWait">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Diseño propocionado por Alura Latam</p>
+      <div>
+        <p>Desarrollado por Miguel Arcangel Lopez</p>
+
+        <a href="https://github.com/miguelCode-02/one-challenge-encriptador-texto" aria-label="Conoce mas sobre como se desarrollo este proyecto" target="_blank" rel="noopener noreferrer">
+        <svg
+          class="iconGitHub"
+          width="50"
+          height="50"
+          viewBox="0 0 50 49"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.7238 39.4086C16.7238 39.611 16.4919 39.7729 16.1996 39.7729C15.8669 39.8033 15.6351 39.6414 15.6351 39.4086C15.6351 39.2062 15.8669 39.0443 16.1593 39.0443C16.4617 39.0139 16.7238 39.1758 16.7238 39.4086ZM13.5887 38.9532C13.5181 39.1556 13.7198 39.3884 14.0222 39.4491C14.2843 39.5503 14.5867 39.4491 14.6472 39.2467C14.7077 39.0443 14.5161 38.8115 14.2137 38.7204C13.9516 38.6496 13.6593 38.7508 13.5887 38.9532ZM18.0444 38.7812C17.752 38.852 17.5504 39.0443 17.5806 39.277C17.6109 39.4795 17.873 39.611 18.1754 39.5402C18.4677 39.4693 18.6694 39.277 18.6391 39.0746C18.6089 38.8824 18.3367 38.7508 18.0444 38.7812ZM24.6774 0C10.6956 0 0 10.6567 0 24.6936C0 35.9171 7.03629 45.5213 17.0867 48.9015C18.377 49.1343 18.8306 48.3348 18.8306 47.6769C18.8306 47.0495 18.8004 43.5883 18.8004 41.463C18.8004 41.463 11.744 42.9811 10.2621 38.4472C10.2621 38.4472 9.1129 35.5022 7.45968 34.7431C7.45968 34.7431 5.15121 33.1542 7.62097 33.1846C7.62097 33.1846 10.131 33.387 11.5121 35.7957C13.7198 39.7021 17.4194 38.5787 18.8609 37.9108C19.0927 36.2915 19.748 35.1682 20.4738 34.5002C14.8387 33.8728 9.15323 33.053 9.15323 23.3173C9.15323 20.5342 9.91936 19.1376 11.5323 17.3564C11.2702 16.6986 10.4133 13.9863 11.7944 10.4847C13.9012 9.82685 18.75 13.2172 18.75 13.2172C20.7661 12.6504 22.9335 12.3569 25.0806 12.3569C27.2278 12.3569 29.3952 12.6504 31.4113 13.2172C31.4113 13.2172 36.2601 9.81673 38.3669 10.4847C39.748 13.9964 38.8911 16.6986 38.629 17.3564C40.2419 19.1477 41.2298 20.5443 41.2298 23.3173C41.2298 33.0834 35.2923 33.8627 29.6573 34.5002C30.5847 35.2998 31.371 36.8178 31.371 39.1961C31.371 42.6066 31.3407 46.8268 31.3407 47.6567C31.3407 48.3145 31.8044 49.114 33.0847 48.8813C43.1653 45.5213 50 35.9171 50 24.6936C50 10.6567 38.6593 0 24.6774 0ZM9.79839 34.9051C9.66734 35.0063 9.69758 35.239 9.86895 35.4313C10.0302 35.5932 10.2621 35.6641 10.3931 35.5325C10.5242 35.4313 10.494 35.1985 10.3226 35.0063C10.1613 34.8443 9.92944 34.7735 9.79839 34.9051ZM8.70968 34.0853C8.63911 34.2169 8.73992 34.3788 8.94153 34.48C9.10282 34.5812 9.30444 34.5508 9.375 34.4092C9.44556 34.2776 9.34476 34.1157 9.14314 34.0145C8.94153 33.9537 8.78024 33.9841 8.70968 34.0853ZM11.9758 37.6882C11.8145 37.8197 11.875 38.1233 12.1069 38.3156C12.3387 38.5484 12.631 38.5787 12.7621 38.4168C12.8931 38.2853 12.8327 37.9816 12.631 37.7894C12.4093 37.5566 12.1069 37.5262 11.9758 37.6882ZM10.8266 36.2005C10.6653 36.3017 10.6653 36.5648 10.8266 36.7976C10.9879 37.0303 11.2601 37.1315 11.3911 37.0303C11.5524 36.8988 11.5524 36.6356 11.3911 36.4029C11.25 36.1701 10.9879 36.0689 10.8266 36.2005Z"
+            fill="black"
+          />
+        </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
