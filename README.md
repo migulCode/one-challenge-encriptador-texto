@@ -11,7 +11,7 @@ Descubre cómo funciona nuestro algoritmo de sustitución de letras y desafía t
 
 ### opcion 1 : Navegación a la página web
 
-1. Haz clic en este enlace: [Encriptador de texto - Reto ONE](https://miguelcode-02.github.io/one-challenge-encriptador-texto/).
+1. Haz clic en este enlace: [https://migulcode.github.io/one-challenge-encriptador-texto/).
 
 ### opcion 2 : Descargar el proyecto
 1. Clona este repositorio en tu máquina local.
